@@ -7,7 +7,7 @@
   }
   </style>
   <body>
-    <h1>Humans and the Environment</h1>
-    <p1>Click here to play</p1>
+    <h1>Cultural appropriation</h1>
+    <p1>Which cultural do you want to explore?</p1>
   </body>
 </html>
