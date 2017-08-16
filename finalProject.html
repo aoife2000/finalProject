@@ -2,6 +2,20 @@
 <html>
   <title>Cultural appropiation</title>
  <style>
+   var config;
+(function (config) {
+    var Scene = (function () {
+        function Scene() {
+        }
+        Scene.MENU = 0;
+        Scene.PLAY = 1;
+        Scene.OVER = 2;
+        Scene.INSTRUCTIONS = 3;
+        return Scene;
+    }());
+    config.Scene = Scene;
+})(config || (config = {}));
+//# sourceMappingURL=scene.js.map
   body {
   text-align:center;
   }
@@ -11,3 +25,4 @@
     <p1>Which culture do you want to explore?</p1>
   </body>
 </html>
+
