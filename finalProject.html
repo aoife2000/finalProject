@@ -11,30 +11,46 @@
 	 {
 		 text-align:center;
 	 }
-	  video1
-	 {
-position: absolute;
-left: 25%;
-z-index:-100;
-min-width: 50%;
-min-height: 50%;
-width: 50%;
-height: 50%;
-transform: translate(-50%, -50%);
+	 .leftHalf {
+    position:absolute;
+    left: 0px;
+    height:100%;
+    width:50%;
+    overflow: hidden;
 }
-	 video2
-	 {
-position: absolute;
-left: 75%;
-z-index:-100;
-min-width: 50%;
-min-height: 50%;
-width: 50%;
-height: 50%;
-transform: translate(-50%, -50%);
+.rightHalf {
+
+    position:absolute;
+    right: 0px;
+    height:100%;
+    width:50%;
+    overflow: hidden;
+}
+
+.leftHalf video {
+    min-width: 100%;
+    min-height: 100%;
+}
+.rightHalf video {
+    min-width: 100%;
+    min-height: 100%;
 }
   </style>
   <body>
+	  <div class="leftHalf">
+    <video preload autoplay loop muted>
+        <source src="Ireland-video.mp4" type="video/mp4">
+        <source src="Ireland-video.webm" type="video/webm" />
+        Video not supported.
+    </video>
+</div>
+<div class="rightHalf">
+    <video preload autoplay loop muted>
+        <source src="Africa-video.mp4" type="video/mp4">
+        <source src="Africa-video.webm" type="video/webm" />
+        Video not supported.
+    </video>
+</div>
     <h1 style="color:white;">Different Cultures</h1>
 	  <p1 style="color:white;"><b>Which culture do you want to explore?</b></p>
 	  <video1 width="400" height="400" autoplay>
