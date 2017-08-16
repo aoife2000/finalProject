@@ -11,38 +11,24 @@
 	 {
 		 text-align:center;
 	 }
-body { height:100%; margin:0; padding:0 }
-div { position:fixed; width:50%; height:50% }
-#NW { top:0;   left:0;  }
-#NE { top:0;   left:50%;}
-#SW { top:50%; left:0; }
-#SE { top:50%; left:50%; } 
+	 video 
+	 {
+		 display:block;
+		 margin-bottom: 1em;
+	 }
 	 <body>
 	 <h1 style="color:white;">Different Cultures</h1>
 	  <p1 style="color:white;">Which culture do you want to explore?</p>
-	  <div id="NW">
-	 <video width="320" height="240" autoplay>
+	 <video width="400" controls>
   <source src="Ireland-video.mp4" type="video/mp4">
   <source src="Ireland-video.ogg" type="video/ogg">
-Your browser does not support the video tag.
+  Your browser does not support HTML5 video.
 </video>
-	 </div>
-<div id="NE">
-	 <video width="320" height="240" autoplay>
+<video width="400" controls>
   <source src="Africa-video.mp4" type="video/mp4">
   <source src="Africa-video.ogg" type="video/ogg">
-Your browser does not support the video tag.
+  Your browser does not support HTML5 video.
 </video>
-	 </div>
-<div id="SW">
-	 <video width="320" height="240" autoplay>
-  <source src="Puerto-Rico-video.mp4" type="video/mp4">
-  <source src="Puerto-Rico-video.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-	 </div>
-<div id="SE"></div>
-    </video>
    	  <div>
   <button type="button" onclick=open info on i> Irish </button>
   <button type="button" onclick=open info on A> African </button>
