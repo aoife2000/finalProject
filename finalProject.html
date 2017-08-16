@@ -11,40 +11,28 @@
 	 {
 		 text-align:center;
 	 }
-	 .leftHalf {
-    position:absolute;
-    left: 0px;
-    height:100%;
-    width:50%;
-		 z-index:-1;
-}
 	 
-.rightHalf {
-    position:absolute;
-    right: 0px;
-    height:100%;
-    width:50%;
-	z-index:-1;
-}
-
-.leftHalf video {
-    min-width: 100%;
-    min-height: 100%;
-		 }
-.rightHalf video {
-    min-width: 100%;
-    min-height: 100%;
-}
+	 html, body { height:100%; margin:0; padding:0 }
+div { position:fixed; width:50%; height:50% }
+#NW { top:0;   left:0;  }
+#NE { top:0;   left:50%; }
+#SW { top:50%; left:0; }
+#SE { top:50%; left:50%; }  
+	 
   </style>
   <body>
-	  <div class="leftHalf">
+	<div id="NW"></div>
+	<div id="NE"></div>
+	<div id="SW"></div>
+	<div id="SE"></div>
+	  <div class="NW">
     <video preload autoplay loop muted>
         <source src="Ireland-video.mp4" type="video/mp4">
         <source src="Ireland-video.webm" type="video/webm" />
         Video not supported.
     </video>
 </div>
-<div class="rightHalf">
+<div class="NE">
     <video preload autoplay loop muted>
         <source src="Africa-video.mp4" type="video/mp4">
         <source src="Africa-video.webm" type="video/webm" />
@@ -54,13 +42,10 @@
     <h1 style="color:white;">Different Cultures</h1>
 	  <p1 style="color:white;"><b>Which culture do you want to explore?</b></p>
 	  <div>
-
-
-		  
-<button type="button" onclick=open info on i> Irish </button>
-<button type="button" onclick=open info on A> African </button>
-<button type="button" onclick=open info on h> Hispanic </button>
- <button type="button" onclick=open info on g> Guyanese </button>
+  <button type="button" onclick=open info on i> Irish </button>
+  <button type="button" onclick=open info on A> African </button>
+  <button type="button" onclick=open info on h> Hispanic </button>
+  <button type="button" onclick=open info on g> Guyanese </button>
 	  </div>
 		       </body> 
 </html>
