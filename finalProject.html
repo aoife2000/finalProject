@@ -2,6 +2,18 @@
 <html>
   <title>Cultural appropiation</title>
  <style>
+	Africa-video.mp4 
+	 { 
+		 position: fixed; 
+		 no-repeat; 
+		 left: 50%; 
+		 z-index:-1000;
+		 min-width: 100%; 
+		 min-height1: 00%; 
+		 width: auto; 
+		 height: 50%; 
+		 transform: translate(-50%, -50%); 
+	 }
   body {
   text-align:center;
   }
@@ -9,12 +21,15 @@
   <body>
     <h1>Cultural appropriation</h1>
 	  <p1>Which culture do you want to explore?</p>
-	  <video width="320" height="240" controls>
-		  <source src="Africa-video.mp4" type="video/mp4">
-	  </video>
+	  <video width="320" height="240" autoplay>
+  <source src="Africa-video.mp4" type="video/mp4">
+  <source src="Africa-video.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
 	  <video width="320" height="240" controls>
 		  <source src="Ireland-video.mp4" type="video/mp4">
 							</video>
+	  
 	  <div>
   <button type="button" onclick=open info on i> Irish </button>
   <button type="button" onclick=open info on A> African </button>
