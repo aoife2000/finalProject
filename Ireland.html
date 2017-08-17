@@ -1,25 +1,14 @@
-var mainState = {  
-    preload: function() {  
-        // Here we preload the assets
-    },
+<!doctype html>
+<html>
+<head>
+    .bg {
+    background-image: source(src=;
 
-    create: function() {  
-        // Here we create the game
-    },
+    /* Full height */
+    height: 100%; 
 
-    update: function() {  
-        // Here we update the game 60 times per second
-    },
-};
-
-// Initialize the game and start our state
-var game = new Phaser.Game(500, 200);  
-game.state.add('main', mainState);  
-game.state.start('main');
-game.stage.backgroundColor = 'blue';
-
-// Start the Arcade physics system (for movements and collisions)
-game.physics.startSystem(Phaser.Physics.ARCADE);
-
-// Add the physics engine to all game objects
-game.world.enableBody = true;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
