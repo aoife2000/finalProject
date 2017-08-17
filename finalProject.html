@@ -16,9 +16,10 @@
 		 width:50%; 
 		 height:50% 
 	 }
-	 #NW { 		
+	 #NW { 
 		 top:0;   
 		 left:0;
+		 float: left;
 		 position:fixed;
 		 z-index:-1
 	 }
@@ -26,13 +27,15 @@
 	 { 
 		 top:0;   
 		 left:50%;
+		 float: left;
 		 position:fixed;
 		 z-index:-1;   
 	  }
 	#SW 
 	 { 
 		 top:50%; 
-		 left:0;
+		 left:0;   
+		 floart: left;
 		 position:fixed;
 		 z-index:-1;
 	 }
@@ -40,6 +43,7 @@
 	 { 
 		 top:50%; 
 		 left:50%; 
+		 float: left;
 		 position:fixed;
 		 z-index:-1;
 	 } 
@@ -51,7 +55,7 @@
 		 <h1>Different Cultures</h1>
 		 <p1>"Which culture would you like to explore?</p1>
 		 <div id="NW">
-			  <button1 type="buttontype1" onclick=open info on i> Irish </button1>
+			 <form method="get" action="https://www.wikihow.com/Main-Page"><button type="submit">Irish</button></form>
 			 <video id="NW"width="100%" height="100%" preload autoplay loop muted>
           <source src="Ireland-video.wbm" type="video/webm">
           <source src="Ireland-video.mp4" type="video/mp4">
@@ -59,7 +63,7 @@
 			 </video>	 
 		 </div>
 <div id="NE">
-	 <button2 type="buttontype2" onclick=open info on A> African </button2>
+	 <form method="get" action="https://www.wikihow.com/Main-Page"><button type="submit">African</button></form>
     <video id="NE"width="100%" height="100%" preload autoplay loop muted>
           <source src="Africa-video.wbm" type="video/webm">
           <source src="Africa-video.mp4" type="video/mp4">
@@ -67,7 +71,7 @@
     </video>
 		 </div>
 <div id="SW">
-	 <button3 type="buttontype3" onclick=open info on h> Hispanic </button3>
+	 <form method="get" action="https://www.wikihow.com/Main-Page"><button type="submit">Hispanic</button></form>
 		 <video id="SW"width="100%" height="100%" preload autoplay loop muted>
           <source src="Puerto-rico-video.wbm" type="video/webm">
           <source src="Puerto-rico-video.mp4" type="video/mp4">
@@ -75,7 +79,7 @@
     </video>
 		 </div>
 <div id="SE">
-	 <button4 type="buttontype4" onclick=open info on g> Guyanese </button4>
+	  <form method="get" action="https://www.wikihow.com/Main-Page"><button type="submit">guyanese</button></form>
 	 <video id="SE"width="100%" height="100%" preload autoplay loop muted>
           <source src="Guyana-video.wbm" type="video/webm">
           <source src="Guyana-video.mp4" type="video/mp4">
@@ -90,7 +94,7 @@
 		  <button2 {font-size: 35px </button2>
 		  <button3 {font-size: 35px </button3>
 		  <button4 {font-size: 355px </button4>
-		 <form method="get" action="https://www.wikihow.com/Main-Page"><button type="submit">Irish</button></form>
+		 
 	  </div>
 		       </body> 
 </html>
