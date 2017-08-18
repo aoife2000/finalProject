@@ -54,6 +54,12 @@ canvas.height = height;
 player.x += player.velX;
 player.y += player.velY;
     
+ if (player.x >= width-player.width) {
+    player.x = width-player.width;
+} else if (player.x <= 0) {
+    player.x = 0;
+}
+    
     
     
  function update(){
