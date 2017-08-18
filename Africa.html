@@ -7,8 +7,7 @@
              height:100%; 
         }
 canvas 
-        { 
-            display:block;
+        {
             background: #eee;
 }
     </style>
@@ -41,9 +40,6 @@ var canvas = document.getElementById("canvas"),
 document.body.addEventListener("keyup", function(e) {
     keys[e.keyCode] = false;
 });
- 
-canvas.width = width;
-canvas.height = height;
  
 // check keys
    if (keys[38]) {
