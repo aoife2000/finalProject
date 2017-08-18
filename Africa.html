@@ -23,6 +23,13 @@ var canvas = document.getElementById("canvas"),
       velY: 0
     },
      keys = [];
+    document.body.addEventListener("keydown", function(e) {
+    keys[e.keyCode] = true;
+});
+ 
+document.body.addEventListener("keyup", function(e) {
+    keys[e.keyCode] = false;
+});
  
 canvas.width = width;
 canvas.height = height;
