@@ -50,9 +50,11 @@ canvas.height = height;
         // left arrow                  
        if (player.velX > -player.speed) {
            player.velX--;
-       }
-   }
-   
+           
+           player.velX *= friction;
+       } 
+    
+   }  
 player.x += player.velX;
 player.y += player.velY;
     
