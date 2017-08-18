@@ -4,14 +4,11 @@
     <title> Exploring Africa </title>
 </head>
 <body>
+
+<canvas id="canvas" style="border:1px solid #000"></canvas>
  
 <script>
-// All of our JavaScript will go here.
-    (function() {
-    var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
-    window.requestAnimationFrame = requestAnimationFrame;
-})();
-    var canvas = document.getElementById("canvas"),
+var canvas = document.getElementById("canvas"),
     ctx = canvas.getContext("2d"),
     width = 500,
     height = 200,
@@ -25,13 +22,9 @@
 canvas.width = width;
 canvas.height = height;
  
-function update(){
-    // draw our player
-    ctx.fillStyle = "red";
-    ctx.fillRect(player.x, player.y, player.width, player.height);
-    // run through the loop again
-    requestAnimationFrame(update);
-window.addEventListener("load", function(){
-  update();
-});
-}
+// draw a small red box, which will eventually become our player.
+ctx.fillStyle = "red";
+ctx.fillRect(player.x, player.y, player.width, player.height);
+</script>
+</body>
+</html>
