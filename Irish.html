@@ -1,1 +1,45 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        img {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          width: 100px;
+          height: 130px;
+        }
+        canvas {
+           position:absolute;
+           width:100%;
+           height:100%;
+        }
+    </style>
+    <title>Exploring Africa</title>
+</head>
+<body>
+<img src="pixie1.jpg">
+<canvas id="canvas" style="border:1px solid #000"></canvas>
+ 
+<script>
+// All of our JavaScript will go here.
+    
+var canvas = document.getElementById("canvas"),
+    ctx = canvas.getContext("2d"), 
+    player = {
+      x : width/2,
+      y : height - 5,
+      width : 5,
+      height : 5
+    };
+ 
+canvas.width = width;
+canvas.height = height;
+ 
+// draw a small red box, which will eventually become our player.
+ctx.fillStyle = "red";
+ctx.fillRect(player.x, player.y, player.width, player.height);
+</script>
+</body>
+</html>
 
