@@ -31,4 +31,7 @@ function update(){
     ctx.fillRect(player.x, player.y, player.width, player.height);
     // run through the loop again
     requestAnimationFrame(update);
+window.addEventListener("load", function(){
+  update();
+});
 }
