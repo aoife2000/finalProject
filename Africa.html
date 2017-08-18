@@ -34,9 +34,33 @@ document.body.addEventListener("keyup", function(e) {
 canvas.width = width;
 canvas.height = height;
  
-// draw a small red box, which will eventually become our player.
-ctx.fillStyle = "red";
-ctx.fillRect(player.x, player.y, player.width, player.height);
+// check keys
+   if (keys[38]) {
+       // up arrow
+   }
+   if (keys[39]) {
+       // right arrow
+       if (player.velX < player.speed) {                         
+           player.velX++;                  
+       }          
+   }          
+   if (keys[37]) {                 
+        // left arrow                  
+       if (player.velX > -player.speed) {
+           player.velX--;
+       }
+   }
+    
+    
+    
+    
+ function update(){
+    // draw our player
+    ctx.fillStyle = "red";
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+    // run through the loop again
+    requestAnimationFrame(update);
+}
 </script>
 </body>
 </html>
