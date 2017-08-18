@@ -25,6 +25,8 @@ var canvas = document.getElementById("canvas"),
      keys = [];
     document.body.addEventListener("keydown", function(e) {
     keys[e.keyCode] = true;
+        
+    friction = 0.8;
 });
  
 document.body.addEventListener("keyup", function(e) {
