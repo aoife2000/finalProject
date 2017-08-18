@@ -25,9 +25,10 @@
 canvas.width = width;
 canvas.height = height;
  
-// draw a small red box, which will eventually become our player.
-ctx.fillStyle = "red";
-ctx.fillRect(player.x, player.y, player.width, player.height);
-</script>
-</body>
-</html>
+function update(){
+    // draw our player
+    ctx.fillStyle = "red";
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+    // run through the loop again
+    requestAnimationFrame(update);
+}
