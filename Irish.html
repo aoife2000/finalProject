@@ -18,11 +18,13 @@
 	}
 </style>
 <body>
+	<img id="image" width="100" height="100" src="pixie1.jpg">
 	<canvas id="canvas"></canvas>
 	<div id="sprites">
 		<div class="character"></div>
 </body>
 <script>
+	var img = document.getElementById("image");
 	var canvas = document.querySelector('#canvas');
 	var context=canvas.getContext("2d");
 	var xPos=0;
