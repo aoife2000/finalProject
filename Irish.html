@@ -20,10 +20,17 @@
 <script>
 	var canvas = document.querySelector("#canvas");
 	var context = canvas.getContext("2d");
+	
+	/// store key codes and currently pressed ones
+	var keys = {};
+    	keys.LEFT = 37;
+    	keys.RIGHT = 39;
 
-	var myImage = new Image();
-	myImage.src = "pixie1.jpg";
-	myImage.addEventListener("load", loadImage, false);
+	
+
+	var img = new Image();
+	img.src = "pixie1.jpg";
+	img.addEventListener("load", loadImage, false);
 	
 	function loadImage(e) {
 	  animate();
@@ -39,7 +46,7 @@
 	  context.clearRect(120, 25, 300, 300);
 
 	  //draw each frame + place them in the middle
-	  context.drawImage(myImage, shift, 0, frameWidth, frameHeight,
+	  context.drawImage(img, shift, 0, frameWidth, frameHeight,
 			    120, 25, frameWidth, frameHeight);
 
 	  /*
@@ -79,7 +86,7 @@
 	};
 	/// game loop
 	setInterval(function(){
-  	detectCharacterMovement();
+  	detectImgMovement();
 	}, 
 	1000/24);
 
