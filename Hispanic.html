@@ -156,18 +156,38 @@ function updateGameArea() {
 }
 
 
-
-function move(dir) {
-
-    myGamePiece.image.src = "PIC.jpg.png";
-
-    if (dir == "up") {myGamePiece.speedY = -1; }
-
-    if (dir == "down") {myGamePiece.speedY = 1; }
-
-    if (dir == "left") {myGamePiece.speedX = -1; }
-
-    if (dir == "right") {myGamePiece.speedX = 1; }
+function getKeyAndMove(e){
+			var key_code=e.which||e.keyCode;
+			switch(key_code){
+				case 37: //left arrow key
+					moveLeft();
+					break;
+				case 38: //Up arrow key
+					moveUp();
+					break;
+				case 39: //right arrow key
+					moveRight();
+					break;
+				case 40: //down arrow key
+					moveDown();
+					break;
+			}
+		}
+		function moveLeft(){
+			objImage.style.left=parseInt(objImage.style.left)-5 +'px';
+		}
+		function moveUp(){
+			objImage.style.top=parseInt(objImage.style.top)-5 +'px';
+		}
+		function moveRight(){
+			objImage.style.left=parseInt(objImage.style.left)+5 +'px';
+		}
+		function moveDown(){
+			objImage.style.top=parseInt(objImage.style.top)+5 +'px';
+		}
+		window.onload=init;
+	</script>
+	</head>
 
 }
 
