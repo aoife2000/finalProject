@@ -41,8 +41,6 @@
 	  context.drawImage(myImage, shift, 0, frameWidth, frameHeight,
 			    120, 25, frameWidth, frameHeight);
 
-	  shift += frameWidth + 1;
-
 	  /*
 	    Start at the beginning once you've reached the
 	    end of your sprite!
@@ -55,6 +53,31 @@
 	  currentFrame++;
 
 	  requestAnimationFrame(animate);
-	}						
+	}
+	function keyDownHandler(event)
+{
+	var keyPressed = String.fromCharCode(event.keyCode);
+
+	if (keyPressed == "W")
+	{		
+		facing = "N";
+		isMoving = true;
+	}
+	else if (keyPressed == "D")
+	{	
+		facing = "E";
+		isMoving = true;		
+	}
+	else if (keyPressed == "S")
+	{	
+		facing = "S";
+		isMoving = true;		
+	}
+	else if (keyPressed == "A")
+	{	
+		facing = "W";
+		isMoving = true;		
+	}
+}
 </script>
 				      
