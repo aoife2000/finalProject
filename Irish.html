@@ -2,38 +2,57 @@
 <html>
 <head>
 <title="Exploring Ireland>
-</head>
 <style>
-.character {
-	width: 50px;
-	height: 50px;
-	background-image: url('pixie1.jpg');
-	display: inline-block;
-	margin: 0 10px 0 0;
+	canvas {
+	border:#333 10px solid;
 	}
-#canvas {
-	width:100%;
-	height:100%;
-	outline:1px solid#000;
+	body {
+	padding:50px;
 	}
 </style>
 <body>
-	<canvas id="canvas"></canvas>
-	<div id="sprites">
-		<div class="character"></div>
-</body>
+	<canvas id="canvas" width="550px" height="350px"></canvas>
+							
+</head>
 <script>
-	var img = document.getElementById("image");
-	var canvas = document.querySelector('#canvas');
-	var context=canvas.getContext("2d");
-	var xPos=0;
-	var yPos=0;
-	context.img(xPos, yPos, 50, 50);
-	context.stroke();
-	function move(e) {
-			alert(e.keyCode);
-			}
-	document.onkeydown=move
-					  
+var canvas = document.querySelector("#canvas");
+var context = canvas.getContext("2d");
+ 
+var myImage = new Image();
+myImage.src = "pixie1.jpg";
+myImage.addEventListener("load", loadImage, false);
+ 
+function loadImage(e) {
+  animate();
+}
+ 
+var shift = 0;
+var frameWidth = 300;
+var frameHeight = 300;
+var totalFrames = 24;
+var currentFrame = 0;
+ 
+function animate() {
+  context.clearRect(120, 25, 300, 300);
+ 
+  //draw each frame + place them in the middle
+  context.drawImage(myImage, shift, 0, frameWidth, frameHeight,
+                    120, 25, frameWidth, frameHeight);
+ 
+  shift += frameWidth + 1;
+ 
+  /*
+    Start at the beginning once you've reached the
+    end of your sprite!
+  */
+  if (currentFrame == totalFrames) {
+    shift = 0;
+    currentFrame = 0;
+  }
+ 
+  currentFrame++;
+ 
+  requestAnimationFrame(animate);
+}						
 </script>
 				      
