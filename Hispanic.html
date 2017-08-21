@@ -20,7 +20,12 @@ function startGame() {
     myBackground = new component(656, 270, "DominicanRepublic.jpg", 0, 0, "image");
     myGameArea.start();
 }
-var myGameArea = {
+function move(dir) { 
+ myGamePiece.image.src = "angry.gif"; 
+ if (dir == "up") {myGamePiece.speedY = -1; } 
+ if (dir == "down") {myGamePiece.speedY = 1; } 
+ if (dir == "left") {myGamePiece.speedX = -1; } 
+ if (dir == "right") {myGamePiece.speedX = 1; } var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 480;
