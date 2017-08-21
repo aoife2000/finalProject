@@ -24,6 +24,9 @@
 	var myImage = new Image();
 	myImage.src = "pixie1.jpg";
 	myImage.addEventListener("load", loadImage, false);
+	
+	var imgX=0;
+	var imgY=0;
 
 	function loadImage(e) {
 	  animate();
@@ -55,30 +58,21 @@
 
 	  requestAnimationFrame(animate);
 	}
-	function keyDownHandler(event)
-{
-	var keyPressed = String.fromCharCode(event.keyCode);
+	  var moveImg = function(dx, dy){
+	  img.x += dx||0;
+	  img.y += dy||0;
+	  img.element.style.left = img.x + 'px';
+	  img.element.style.top = img.y + 'px';
+	};
 
-	if (keyPressed == "W")
-	{		
-		facing = "N";
-		isMoving = true;
-	}
-	else if (keyPressed == "D")
-	{	
-		facing = "E";
-		isMoving = true;		
-	}
-	else if (keyPressed == "S")
-	{	
-		facing = "S";
-		isMoving = true;		
-	}
-	else if (keyPressed == "A")
-	{	
-		facing = "W";
-		isMoving = true;		
-	}
-}
+	/// character control
+	var detectImgMovement = function(){
+	  if ( keys[keys.LEFT] ) {
+	    moveImg(-1);
+	  }
+	  if ( keys[keys.RIGHT] ) {
+	    moveImg(1);
+	  }
+	};
 </script>
 				      
