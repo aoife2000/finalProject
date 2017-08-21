@@ -25,9 +25,6 @@
 	myImage.src = "pixie1.jpg";
 	myImage.addEventListener("load", loadImage, false);
 	
-	var imgX=0;
-	var imgY=0;
-
 	function loadImage(e) {
 	  animate();
 	}
@@ -58,6 +55,12 @@
 
 	  requestAnimationFrame(animate);
 	}
+	
+	document.body.onkeyup = 
+	document.body.onkeydown = function(e){
+  	var kc = e.keyCode || e.which;
+  	keys[kc] = e.type == 'keydown';
+				       
 	  var moveImg = function(dx, dy){
 	  img.x += dx||0;
 	  img.y += dy||0;
@@ -74,5 +77,11 @@
 	    moveImg(1);
 	  }
 	};
+	/// game loop
+	setInterval(function(){
+  	detectCharacterMovement();
+	}, 
+	1000/24);
+
 </script>
 				      
