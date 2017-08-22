@@ -62,6 +62,17 @@
 			objImage.style.top=parseInt(objImage.style.top)+5 +'px';
 		}
 		window.onload=init;
+	var allEnemies = []; 
+	function Enemy(x,y){ this.x = x || (Math.random() * WIDTH) | 0;
+			    this.y = y || (Math.random() * height) | 0; 
+			    this.sprite = "beer.jpg"; 
+			    allEnemies.push(this); // this is called every time you do `new Enemy(n,n) // the new object will automatically be pushed to the array.
+	var MINIMUM = 100; // 0.1 seconds 
+	var MILLISECONDS = 10000; // 10 seconds 
+	function spawnAtRandom(){ 
+		// add your code here. 
+		setTimeout(spawnAtRandom, minimum + (Math.random() * (MILLISECONDS-MINIMUM))); } spawnAtRandom();
+
 	</script>
 	</head>
 	<body onkeydown='getKeyAndMove(event)'>
