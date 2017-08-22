@@ -7,7 +7,7 @@
 		height: 100%;
 		margin: 0;
 	}
-	#canvas {
+	#canvas{
 		background-image: url("Ireland.jpg");
 		/* Full height */
 		height: 100%; 
@@ -21,6 +21,9 @@
 		/*z-index:-1;*/
 		position:absolute;
 }
+	img {
+		
+	}
   </style>
 
 <script type="text/javascript">
@@ -62,20 +65,10 @@
 			objImage.style.top=parseInt(objImage.style.top)+5 +'px';
 		}
 		window.onload=init;
-	var allEnemies = []; 
-	function Enemy(x,y){ this.x = x || (Math.random() * WIDTH) | 0;
-			    this.y = y || (Math.random() * height) | 0; 
-			    this.sprite = "beer.jpg"; 
-			    allEnemies.push(this); // this is called every time you do `new Enemy(n,n) // the new object will automatically be pushed to the array.
-	var MINIMUM = 100; // 0.1 seconds 
-	var MILLISECONDS = 10000; // 10 seconds 
-	function spawnAtRandom(){ 
-		// add your code here. 
-		setTimeout(spawnAtRandom, minimum + (Math.random() * (MILLISECONDS-MINIMUM))); } spawnAtRandom();
-
 	</script>
 	</head>
 	<body onkeydown='getKeyAndMove(event)'>
+		<img src="beer.jpg" height="100px" width="80px" padding-top="50px" padding-left="50px">
 		<canvas id="canvas"></canvas>
 		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
 	</body>
