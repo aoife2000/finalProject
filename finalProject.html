@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
   <title>Different Cultures</title>
@@ -17,7 +16,6 @@
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-
 /* The navigation menu links */
 .sidenav a {
     padding: 8px 8px 8px 32px;
@@ -28,12 +26,10 @@
     transition: 0.3s;
     text-align:left;
 }
-
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover, .offcanvas a:focus{
     color: #f1f1f1;
 }
-
 /* Position and style the close button (top right corner) */
 .sidenav .closebtn {
     position: absolute;
@@ -42,13 +38,11 @@
     font-size: 36px;
     margin-left: 50px;
 }
-
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
     transition: margin-left .5s;
     padding: 20px;
 }
-
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
@@ -56,16 +50,13 @@
 }
 	 body{
 		 font-family: 'Bad Script';font-size: 22px;
+		 text-align: center;
 		 height:100%;
 		 width:100%;
 		 margin:0; 
 		 padding:0;
 	 }
-	 #heading {
-		 text-align:center;
-		 margin:0px;
-		 padding:0px
-	  }
+	 
 	 div { 
 		 position:absolute; 
 		 width:50%; 
@@ -113,10 +104,8 @@
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
 <div id="main">
 </div>
-<div id="heading">
 	<h1>Different Cultures</h1>
 	<p1>"Which culture would you like to explore?</p1>
-</div>
 <div id="NW">
 	<form method="get" action="https://aoife2000.github.io/finalProject/Irish.html"><button type="submit">Irish</button1></form>
 	<video id="NW"width="100%" height="100%" preload autoplay loop muted>
@@ -156,11 +145,9 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
 }
-
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
 }
 </script>
-</html>
