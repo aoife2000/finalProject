@@ -64,6 +64,14 @@
   		  // the new object will automatically be pushed to the array.
         }
 	
+	var MINIMUM = 100; // 0.1 seconds
+	var MILLISECONDS = 10000; // 10 seconds
+	function spawnAtRandom(){
+	    // add your code here.
+    	    setTimeout(spawnAtRandom, minimum + (Math.random() * (MILLISECONDS-MINIMUM)));
+        }
+        spawnAtRandom();
+	
 	
 	
 	
