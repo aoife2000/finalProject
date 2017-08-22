@@ -102,8 +102,8 @@ function update() {
 function draw() {
   ...
 
-  enemies.forEach(function(enemy) {
-    enemy.draw();
+  enemies.forEach(function    enemy.draw();
+(enemy) {
   });
 }
 	player.sprite = Sprite("player");
@@ -115,7 +115,7 @@ player.draw = function() {
 function Enemy(I) {
   ...
 
-  I.sprite = Sprite("enemy");
+  I.sprite = Sprite("beer.jpg");
 
   I.draw = function() {
     this.sprite.draw(canvas, this.x, this.y);
