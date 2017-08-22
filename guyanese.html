@@ -83,7 +83,11 @@ Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 	
-	
+	// Place all enemy objects in an array called allEnemies
+var allEnemies=[];
+allEnemies.push(new Enemy(0,135))
+allEnemies.push(new Enemy(0,225))
+allEnemies.push(new Enemy(0,50))
 	
 	
 	
