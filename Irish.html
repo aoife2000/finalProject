@@ -21,9 +21,6 @@
 		/*z-index:-1;*/
 		position:absolute;
 }
-	img {
-		
-	}
   </style>
 
 <script type="text/javascript">
@@ -68,10 +65,10 @@
 	</head>
 	<body onkeydown='getKeyAndMove(event)'>
 		<canvas id="canvas">
-			<marquee behavior="scroll" direction="left" scrollamount="30">
-				<img src="beer.jpg" width="125" height="82" alt="Beer">
-			</marquee>
 		</canvas>
 		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
+		<marquee behavior="scroll" direction="left" scrollamount="30">
+			<img src="beer.jpg" width="125" height="82" alt="Beer">
+		</marquee>
 	</body>
 </html>
