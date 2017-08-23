@@ -61,13 +61,19 @@
 			objImage.style.top=parseInt(objImage.style.top)+5 +'px';
 		}
 		window.onload=init;
+	function randPosition (){
+		var randomNumberBetween20and100 = Math.floor(Math.random() * 80)+ 20;
+		return randomNumberBetween20and100;
+	}
+	function randDirection(){
+	}
 	</script>
 	</head>
 	<body onkeydown='getKeyAndMove(event)'>
 		<canvas id="canvas">
 		</canvas>
 		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
-		<marquee behavior="scroll" direction="down" scrollamount="30">
+		<marquee behavior="scroll" direction="left" scrollamount="randPosition()">
 			<img src="beer.jpg" width="125" height="82" alt="Beer">
 		</marquee>
 	</body>
