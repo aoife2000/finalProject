@@ -69,13 +69,21 @@
 	}
 	var a=image1;
 	var b=marquee;
-	function isCollide(a, b) {
+	
+	var msg="GAME OVER";
+	function check() {
+		function isCollide(a, b) {
 		return !(
 			((a.y + a.height) < (b.y)) ||
 			(a.y > (b.y + b.height)) ||
 			((a.x + a.width) < b.x) ||
 			(a.x > (b.x + b.width))
 		    );
+	}
+		return true;
+	}
+	if(check()) {
+		document.write(msg);
 	}
 	</script>
 	</head>
