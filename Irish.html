@@ -69,10 +69,14 @@
 	}
 	var a = document.getElementById("image1");
 	var b = document.getElementById("beer");
+	console.log(b.height)
+	console.log(b.width)
+	console.log(b.x)
+	console.log(b.y)
 	
 	var msg="GAME OVER";
 	function check() {
-		function isCollide(src, b) {
+		function isCollide(a, b) {
 			return !(
 				((a.y + a.height) < (b.y)) ||
 				(a.y > (b.y + b.height)) ||
@@ -80,7 +84,7 @@
 				(a.x > (b.x + b.width))
 			    );
 		}
-		return true;
+		return isCollide(a,b);
 	}
 	if(check()) {
 		console.log(check());
