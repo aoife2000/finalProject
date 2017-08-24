@@ -67,17 +67,17 @@
 	}
 	function randDirection(){
 	}
-	var a=<img id="image1">;
+	var src = document.getElementById("img").getAttribute("src");
 	var b=marquee;
 	
 	var msg="GAME OVER";
 	function check() {
-		function isCollide(a, b) {
+		function isCollide(src, b) {
 		return !(
-			((a.y + a.height) < (b.y)) ||
-			(a.y > (b.y + b.height)) ||
-			((a.x + a.width) < b.x) ||
-			(a.x > (b.x + b.width))
+			((src.y + src.height) < (b.y)) ||
+			(src.y > (b.y + b.height)) ||
+			((src.x + src.width) < b.x) ||
+			(src.x > (b.x + b.width))
 		    );
 	}
 		return true;
