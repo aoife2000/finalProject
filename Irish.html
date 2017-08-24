@@ -9,6 +9,9 @@
 		height: 100%;
 		margin: 0;
 	}
+	#image1{
+		z-index:1;
+	}
 	#canvas{
 		background-image: url("Ireland.jpg");
 		/* Full height */
@@ -90,14 +93,9 @@
 	</script>
 	</head>
 	<body onkeydown='getKeyAndMove(event)' onLoad="javascript:loadBouncingImages();">
-	
 		<canvas id="canvas">
 		</canvas>
 		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
-		<div id="animated-example" class="animated bounce"></div>
-		<button onclick="myFunction()">Reload page</button>
-      
-      
 		<script>
 	/*var a = document.getElementById("image1");
 	var b = document.getElementById("beer");
