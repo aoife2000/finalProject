@@ -67,22 +67,23 @@
 	}
 	function randDirection(){
 	}
-	var src = document.getElementById("image1");
-	var b=document.getElementById("beer");
+	var a = document.getElementById("image1");
+	var b = document.getElementById("beer");
 	
 	var msg="GAME OVER";
 	function check() {
 		function isCollide(src, b) {
 			return !(
-				((src.y + src.height) < (b.y)) ||
-				(src.y > (b.y + b.height)) ||
-				((src.x + src.width) < b.x) ||
-				(src.x > (b.x + b.width))
+				((a.y + a.height) < (b.y)) ||
+				(a.y > (b.y + b.height)) ||
+				((a.x + a.width) < b.x) ||
+				(a.x > (b.x + b.width))
 			    );
 		}
 		return true;
 	}
 	if(check()) {
+		console.log(check());
 		document.write(msg);
 	}
 	</script>
