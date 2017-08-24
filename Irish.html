@@ -21,6 +21,22 @@
 		/*z-index:-1;*/
 		position:absolute;
 }
+	.wrapper {
+		overflow: hidden;
+	}
+	.sliding-background {
+		background: url("Ireland.jpg") repeat-x;
+		height: 100%;
+		width: 100%;
+		animation: slide 60s linear infinite;
+	}
+	@keyframes .slide {
+		0%{
+			transform: translate3d(0, 0, 0);
+		100%{
+			transform: translate3d(-1692px, 0, 0);
+  }
+}
   </style>
 
 <script type="text/javascript">
@@ -78,7 +94,7 @@
 			<img id="beer" src="beer.jpg" width="125" height="82" alt="Beer" position="relative">
 		</marquee>
 	<script>
-	var a = document.getElementById("image1");
+	/*var a = document.getElementById("image1");
 	var b = document.getElementById("beer");
 	
 	var msg="GAME OVER";
@@ -97,7 +113,10 @@
 		console.log(check());
 		alert("collision");
 		document.write(msg);
-	}
+	}*/
+	<div class="wrapper>
+		<div class="sliding-background"></div>
+	</div>
 	</script>
 	</body>
 </html>
