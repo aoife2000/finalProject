@@ -25,8 +25,13 @@
 
 <script type="text/javascript">
 		var objImage=null;
+		var beer=null;
 		function init(){
 			objImage=document.getElementById("image1");
+			objImage.style.position='relative';
+			objImage.style.left='0px';
+			objImage.style.top='0px';
+			beer = document.getElementById("beer");
 			objImage.style.position='relative';
 			objImage.style.left='0px';
 			objImage.style.top='0px';
@@ -80,7 +85,6 @@
 	<script>
 	var a = document.getElementById("image1");
 	var b = document.getElementById("beer");
-
 	
 	var msg="GAME OVER";
 	function check() {
