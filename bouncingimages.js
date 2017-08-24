@@ -18,7 +18,7 @@ bouncingImages = new Object();
 bouncingImages.imgCount = 3;
 bouncingImages.imgWidth = 40;
 bouncingImages.imgHeight = 40;
-bouncingImages.imgSrc = 'superball.gif';
+bouncingImages.imgSrc = 'beer.jpg';
 
 bouncingImages.frameRate = 30;
 
