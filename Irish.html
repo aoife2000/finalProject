@@ -68,7 +68,7 @@
 	function randDirection(){
 	}
 	var src = document.getElementById("image1");
-	var b=marquee;
+	var b=document.getElementById("beer");
 	
 	var msg="GAME OVER";
 	function check() {
@@ -92,7 +92,7 @@
 		</canvas>
 		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
 		<marquee behavior="scroll" direction="left" scrollamount="30">
-			<img src="beer.jpg" width="125" height="82" alt="Beer">
+			<img id="beer" src="beer.jpg" width="125" height="82" alt="Beer">
 		</marquee>
 	</body>
 </html>
