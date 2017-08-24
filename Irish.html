@@ -67,7 +67,18 @@
 	}
 	function randDirection(){
 	}
-	var a = document.getElementById("image1");
+	
+	</script>
+	</head>
+	<body onkeydown='getKeyAndMove(event)'>
+		<canvas id="canvas">
+		</canvas>
+		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
+		<marquee behavior="scroll" direction="left" scrollamount="30">
+			<img id="beer" src="beer.jpg" width="125" height="82" alt="Beer">
+		</marquee>
+	<script>
+		var a = document.getElementById("image1");
 	var b = document.getElementById("beer");
 	console.log(b);
 	console.log(b.height);
@@ -92,13 +103,5 @@
 		document.write(msg);
 	}
 	</script>
-	</head>
-	<body onkeydown='getKeyAndMove(event)'>
-		<canvas id="canvas">
-		</canvas>
-		<img id="image1" src="pixie1.jpg" alt="includehelp.com" position="relative">
-		<marquee behavior="scroll" direction="left" scrollamount="30">
-			<img id="beer" src="beer.jpg" width="125" height="82" alt="Beer">
-		</marquee>
 	</body>
 </html>
