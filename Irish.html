@@ -73,13 +73,13 @@
 	var msg="GAME OVER";
 	function check() {
 		function isCollide(src, b) {
-		return !(
-			((src.y + src.height) < (b.y)) ||
-			(src.y > (b.y + b.height)) ||
-			((src.x + src.width) < b.x) ||
-			(src.x > (b.x + b.width))
-		    );
-	}
+			return !(
+				((src.y + src.height) < (b.y)) ||
+				(src.y > (b.y + b.height)) ||
+				((src.x + src.width) < b.x) ||
+				(src.x > (b.x + b.width))
+			    );
+		}
 		return true;
 	}
 	if(check()) {
